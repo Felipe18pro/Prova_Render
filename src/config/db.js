@@ -6,7 +6,7 @@ dotenv.config()
 const connectDB = async () => {
     
       mongoose
-      .connect(`mongodb+srv://${process.env.DB_USER}:${process.env.PASSWORD}@${process.env.CLUSTER_ADDRESS}/${process.env.DB_NAME}`)
+      .connect(`${process.env.URI}`)
       .then("Conectado ao MongoDB com sucesso")
       .catch(console.error("Erro ao conectar ao MongoDB"))
 }
